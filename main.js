@@ -16,7 +16,7 @@ let interval = null;
 
 document.getElementById("title").onmouseover = event => {  
   let iteration = 0;
-  
+  w
   clearInterval(interval);
   
   interval = setInterval(() => {
@@ -37,4 +37,9 @@ document.getElementById("title").onmouseover = event => {
     
     iteration += 0.25;
   }, 20);
+}
+
+
+function furiaclick(){
+  console.log("Go FURIA!")
 }
