@@ -17,7 +17,7 @@ let interval = null;
 document.getElementById("title").onmouseover = event => {  
   let iteration = 0;
   clearInterval(interval);
-  
+
   interval = setInterval(() => {
     event.target.innerText = event.target.innerText
       .split("")
@@ -42,3 +42,8 @@ document.getElementById("title").onmouseover = event => {
 function furiaclick(){
   console.log("Go FURIA!")
 }
+
+
+
+
+
