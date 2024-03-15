@@ -16,7 +16,6 @@ let interval = null;
 
 document.getElementById("title").onmouseover = event => {  
   let iteration = 0;
-  w
   clearInterval(interval);
   
   interval = setInterval(() => {
