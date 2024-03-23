@@ -70,12 +70,3 @@ body{
     margin-top: 2vh;
     font-size: 1.1em;
 }
-
-#furiaimage{
-    width: 13vw;
-    aspect-ratio: 1;
-    background-image: url('./furia-min.png');
-    background-size:contain ;
-    background-repeat: no-repeat;
-    margin-bottom: 10vh;
-}
