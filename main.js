@@ -1,15 +1,3 @@
-const tracker = document.getElementById('tracker')
-
-document.body.onpointermove = event => {
-    const {clientX, clientY} = event
-
-    tracker.animate({
-        left: `${clientX}px`,
-        top: `${clientY}px`
-    }, {duration: 2500, fill: "forwards"})
-}
-
-
 const letters = "abcdefghijklmnopqrstuvwxyz";
 
 let interval = null;
