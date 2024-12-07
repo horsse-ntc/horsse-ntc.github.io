@@ -26,3 +26,35 @@ document.getElementById("title").onmouseover = event => {
     iteration += 0.25;
   }, 20);
 }
+
+
+const audio = document.getElementById("audio");
+const playPauseBtn = document.getElementById("play-pause-btn");
+const muteBtn = document.getElementById("mute-btn");
+const progress = document.getElementById("progress");
+
+let isMuted = false;
+
+// Play/Pause functionality
+playPauseBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    playPauseBtn.querySelector("img").src = "icons/pause.png";
+  } else {
+    audio.pause();
+    playPauseBtn.querySelector("img").src = "icons/play.png";
+  }
+});
+
+// Mute/Unmute functionality
+muteBtn.addEventListener("click", () => {
+  isMuted = !isMuted;
+  audio.muted = isMuted;
+  muteBtn.querySelector("img").src = isMuted ? "icons/volume-off.png" : "icons/volume-on.png";
+});
+
+// Update progress bar
+audio.addEventListener("timeupdate", () => {
+  const progressWidth = (audio.currentTime / audio.duration) * 100;
+  progress.style.width = `${progressWidth}%`;
+});
