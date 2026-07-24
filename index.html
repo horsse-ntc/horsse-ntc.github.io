@@ -1,33 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>horsse.club</title>
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./main.js"></script>
-</head>
-
-<body>
-
-    <div class="content">    
-        <h1 id="title" data-value="horsse.club">horsse.club</h1>
-        <h2 id="subtitle">coming soon</h2>
-    </div>
-
-    <div class="music-player">
-        <div class="song-name">BYSTANDERS</div>
-        <button id="mute-btn">
-            <img src="icons/volume-on.png" alt="Mute/Unmute">
-        </button>
-        <button id="play-pause-btn">
-            <img src="icons/pause.png" alt="Play/Pause">
-        </button>
-        <div class="progress-bar">
-          <div id="progress"></div>
-        </div>
-    </div>
-    <audio id="audio" src="BYSTANDERS.mp3" autoplay></audio>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>horsse</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
