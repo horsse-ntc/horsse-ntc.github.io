@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -24,6 +26,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run fetch:screenshots
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
